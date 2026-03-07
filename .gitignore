@@ -1,0 +1,15 @@
+# Deployment logs (contain server connection details)
+deploy.log
+
+# Internal AI configuration (not part of the project)
+antigravity_master_plan.md
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store

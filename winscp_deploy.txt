@@ -1,0 +1,21 @@
+# WinSCP Script for Aloni's Barber Shop Deployment
+# -------------------------------------------------
+
+# Automatically answer all prompts
+option batch on
+# Disable overwriting confirmations
+option confirm off
+
+# Connect to the server
+# Format: sftp://user:password@host/
+open sftp://YOUR_SFTP_USERNAME:YOUR_SFTP_PASSWORD_HERE@ssh.alonis-barbershop.de/ -hostkey="*"
+
+# Synchronize local files to remote server
+# '|' starts the exclusion list. 
+# We exclude the master plan as requested.
+synchronize remote . ./ -filemask="|antigravity_master_plan.md; winscp_deploy.txt; deploy.bat; deploy.log; .git/; .agent/"
+
+# Disconnect
+close
+# Exit WinSCP
+exit

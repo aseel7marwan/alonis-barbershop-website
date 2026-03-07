@@ -1,0 +1,1393 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aloni's Barber Shop Köln-Sülz – Da wo du zuhause bist. Professionelle Haarschnitte, Bartpflege und Gesichtsbehandlungen für Damen & Herren seit 2015."
+    />
+    <title>ALONI'S BARBER SHOP — Da wo du zuhause bist</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+    <link rel="apple-touch-icon" href="./assets/images/logo.png" />
+
+    <!-- Fonts: Cinzel (Display) + Montserrat (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- LOADER -->
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-logo">
+        <img src="assets/images/logo.png" alt="Aloni's" />
+      </div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         NAVIGATION — Heavy Glassmorphism
+    ═══════════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <img
+            src="assets/images/logo.png"
+            alt="Aloni's Barber Shop"
+            class="nav-logo-img"
+          />
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">ÜBER UNS</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#preise">PREISE</a></li>
+          <li><a href="#galerie">GALERIE</a></li>
+          <li><a href="#kontakt">KONTAKT</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="nav-socials">
+            <a
+              href="https://www.instagram.com/aloni_barbershop/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              class="social-icon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a
+              href="https://www.tiktok.com/@alonis_barbershop?_r=1&_t=ZG-93olIEzUlPs"
+              target="_blank"
+              rel="noopener"
+              aria-label="TikTok"
+              class="social-icon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
+            </a>
+          </div>
+          <a
+            href="https://buchung.treatwell.de/ort/425567/menue/"
+            target="_blank"
+            rel="noopener"
+            class="nav-cta"
+            >TERMIN BUCHEN</a
+          >
+          <button class="nav-toggle" id="navToggle" aria-label="Menü">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Fullscreen Overlay Menu -->
+    <div class="overlay-menu" id="overlayMenu">
+      <div class="overlay-bg"></div>
+      <ul class="overlay-links">
+        <li><a href="#about" class="overlay-link">ÜBER UNS</a></li>
+        <li><a href="#services" class="overlay-link">SERVICES</a></li>
+        <li><a href="#preise" class="overlay-link">PREISE</a></li>
+        <li><a href="#galerie" class="overlay-link">GALERIE</a></li>
+        <li><a href="#kontakt" class="overlay-link">KONTAKT</a></li>
+        <li>
+          <a
+            href="https://buchung.treatwell.de/ort/425567/menue/"
+            target="_blank"
+            rel="noopener"
+            class="overlay-link overlay-cta-link"
+            >TERMIN BUCHEN</a
+          >
+        </li>
+      </ul>
+      <div class="overlay-socials">
+        <a
+          href="https://www.instagram.com/aloni_barbershop/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+          class="social-icon-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
+        <a
+          href="https://www.tiktok.com/@alonis_barbershop?_r=1&_t=ZG-93olIEzUlPs"
+          target="_blank"
+          rel="noopener"
+          aria-label="TikTok"
+          class="social-icon-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         HERO — Cinematic Fullscreen
+    ═══════════════════════════════════════════ -->
+    <section id="hero" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal-text">
+          BARBER SHOP IN KÖLN-SÜLZ · EST. 2015
+        </p>
+        <h1 class="hero-heading">
+          <span class="letter-reveal">Da wo du</span><br />
+          <em class="letter-reveal delay-1">zuhause bist</em>
+        </h1>
+        <p class="hero-sub reveal-text delay-2">
+          Damen & Herren · Mit und ohne Termin
+        </p>
+        <a
+          href="https://buchung.treatwell.de/ort/425567/menue/"
+          target="_blank"
+          rel="noopener"
+          class="btn-liquid reveal-text delay-3"
+          >JETZT TERMIN BUCHEN</a
+        >
+      </div>
+      <div class="hero-scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>SCROLL</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT — Editorial Spacious
+    ═══════════════════════════════════════════ -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="section-tag reveal-up">ÜBER UNS</span>
+            <h2 class="section-heading reveal-up">
+              DEIN<br />GENTLEMAN'S<br />BARBER
+            </h2>
+            <p class="body-text reveal-up">
+              Bei Aloni's Barber Shop vereinen wir traditionelle Barbier-Kunst
+              mit modernem Stil. Seit 2015 bieten wir jedem Kunden ein
+              außergewöhnliches Erlebnis — in einer Atmosphäre, die dich wie zu
+              Hause fühlen lässt. Für Damen und Herren.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card reveal-up">
+              <span class="stat-num" data-target="11">0</span>
+              <span class="stat-plus">+</span>
+              <span class="stat-label">JAHRE ERFAHRUNG</span>
+            </div>
+            <div class="stat-card reveal-up">
+              <span class="stat-num" data-target="1000">0</span>
+              <span class="stat-plus">+</span>
+              <span class="stat-label">ZUFRIEDENE KUNDEN</span>
+            </div>
+            <div class="stat-card reveal-up">
+              <span class="stat-num" data-target="4">0</span>
+              <span class="stat-plus"></span>
+              <span class="stat-label">PROFESSIONELLE BARBER</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SERVICES — Clip-Path Cards
+    ═══════════════════════════════════════════ -->
+    <section id="services" class="section services">
+      <div class="container">
+        <span class="section-tag centered reveal-up">WAS WIR BIETEN</span>
+        <h2 class="section-heading centered reveal-up">UNSERE<br />SERVICES</h2>
+        <div class="services-grid">
+          <div class="service-card reveal-up">
+            <div class="service-img">
+              <img
+                src="assets/images/gallery/Haarschnitt.jpg"
+                alt="Professioneller Haarschnitt"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-info">
+              <h3>HAARSCHNITT</h3>
+              <p>
+                Professionelle Haarschnitte mit der Maschine sowie klassische
+                Scherenschnitte, perfekt auf deinen Stil abgestimmt.
+              </p>
+            </div>
+          </div>
+          <div class="service-card reveal-up">
+            <div class="service-img">
+              <img
+                src="assets/images/gallery/Bart.jpg"
+                alt="Professionelle Bartpflege"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-info">
+              <h3>BART</h3>
+              <p>
+                Professionelle Bartrasur mit dem Rasiermesser in klassischer
+                Barber-Qualität für einen perfekt gepflegten Look.
+              </p>
+            </div>
+          </div>
+          <div class="service-card reveal-up">
+            <div class="service-img">
+              <img
+                src="assets/images/gallery/Augenbrauen %26 Maske .jpg"
+                alt="Augenbrauen & Gesichtsmaske"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-info">
+              <h3>AUGENBRAUEN & MASKE</h3>
+              <p>
+                Haarentfernung mit Faden & Waxing für Nase, Kinn und Ohren.
+                Entspanne bei einer Gesichtsmaske.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PRICES — Luxury Menu
+    ═══════════════════════════════════════════ -->
+    <section id="preise" class="section preise">
+      <div class="container">
+        <span class="section-tag centered reveal-up">DIE KARTE</span>
+        <h2 class="section-heading centered reveal-up">PREISLISTE</h2>
+        <div class="menu-grid">
+          <!-- HERREN -->
+          <div class="menu-panel reveal-up">
+            <h3 class="menu-title">HERREN</h3>
+            <div class="menu-row">
+              <span>Herren Schnitt</span><span class="menu-line"></span
+              ><span class="menu-price">25€</span>
+            </div>
+            <div class="menu-row">
+              <span>Konturenschnitt</span><span class="menu-line"></span
+              ><span class="menu-price">12€</span>
+            </div>
+            <div class="menu-row">
+              <span>Kinder Schnitt</span><span class="menu-line"></span
+              ><span class="menu-price">18€</span>
+            </div>
+            <div class="menu-sep"></div>
+            <div class="menu-row">
+              <span>Bart Rasur</span><span class="menu-line"></span
+              ><span class="menu-price">15€</span>
+            </div>
+            <div class="menu-row">
+              <span>Bart Färben</span><span class="menu-line"></span
+              ><span class="menu-price">20€</span>
+            </div>
+            <div class="menu-sep"></div>
+            <div class="menu-row">
+              <span>Waxing</span><span class="menu-line"></span
+              ><span class="menu-price">ab 5€</span>
+            </div>
+            <div class="menu-row">
+              <span>Augenbrauen</span><span class="menu-line"></span
+              ><span class="menu-price">ab 8€</span>
+            </div>
+            <div class="menu-row">
+              <span>Gesichtsbehandlung</span><span class="menu-line"></span
+              ><span class="menu-price">10€</span>
+            </div>
+            <div class="menu-row">
+              <span>Rasurmuster</span><span class="menu-line"></span
+              ><span class="menu-price">ab 25€</span>
+            </div>
+            <div class="menu-sep"></div>
+            <div class="menu-row menu-row-vip">
+              <span>VIP PAKET</span><span class="menu-line"></span
+              ><span class="menu-price">60€</span>
+            </div>
+          </div>
+          <!-- DAMEN -->
+          <div class="menu-panel reveal-up">
+            <h3 class="menu-title">DAMEN</h3>
+            <div class="menu-row">
+              <span>Schneiden, Waschen & Föhnen</span
+              ><span class="menu-line"></span
+              ><span class="menu-price">ab 32€</span>
+            </div>
+            <div class="menu-row">
+              <span>Haarmaske</span><span class="menu-line"></span
+              ><span class="menu-price">15€</span>
+            </div>
+            <div class="menu-sep"></div>
+            <div class="menu-row">
+              <span>Waxing Augenbrauen</span><span class="menu-line"></span
+              ><span class="menu-price">18€</span>
+            </div>
+            <div class="menu-row">
+              <span>Waxing Gesicht Komplett</span><span class="menu-line"></span
+              ><span class="menu-price">15€</span>
+            </div>
+            <div class="menu-row">
+              <span>Waxing Oberlippe</span><span class="menu-line"></span
+              ><span class="menu-price">6€</span>
+            </div>
+            <div class="menu-row">
+              <span>Waxing Kinn</span><span class="menu-line"></span
+              ><span class="menu-price">5€</span>
+            </div>
+            <div class="menu-row">
+              <span>Waxing Nase</span><span class="menu-line"></span
+              ><span class="menu-price">6€</span>
+            </div>
+            <div class="menu-sep"></div>
+            <div class="menu-row">
+              <span>Augenbrauen</span><span class="menu-line"></span
+              ><span class="menu-price">ab 8€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         GALLERY — Infinite Marquee
+    ═══════════════════════════════════════════ -->
+    <section id="galerie" class="section galerie">
+      <div class="container">
+        <span class="section-tag centered reveal-up">EINBLICKE</span>
+        <h2 class="section-heading centered reveal-up">GALERIE</h2>
+      </div>
+      <!-- Row 1 -->
+      <div class="marquee">
+        <div class="marquee-track marquee-left">
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/1.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/2.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/3.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/4.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Haarschnitt.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Bart.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Augenbrauen %26 Maske .jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <!-- Duplicate for infinite loop -->
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/1.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/2.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/3.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/4.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Haarschnitt.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Bart.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Augenbrauen %26 Maske .jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="marquee">
+        <div class="marquee-track marquee-right">
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/1.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/2.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/3.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/4.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Haarschnitt.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Bart.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Augenbrauen %26 Maske .jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <!-- Duplicate -->
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/4.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Bart.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/1.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/Haarschnitt.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/3.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+          <div class="marquee-item">
+            <img
+              src="assets/images/gallery/2.jpg"
+              alt="Aloni's Barber Shop"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         INSTAGRAM FEED — Premium Grid
+    ═══════════════════════════════════════════ -->
+    <section id="instagram" class="section insta-section">
+      <div class="container">
+        <span class="section-tag centered reveal-up">FOLGE UNS</span>
+        <h2 class="section-heading centered reveal-up">INSTAGRAM</h2>
+
+        <!-- Profile Header -->
+        <div class="insta-profile reveal-up">
+          <div class="insta-avatar">
+            <img src="assets/images/logo.png" alt="Aloni's Barber Shop" />
+          </div>
+          <div class="insta-profile-info">
+            <div class="insta-username">
+              <span>aloni_barbershop</span>
+              <svg
+                class="insta-verified"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="#c9a44c"
+              >
+                <path
+                  d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"
+                />
+              </svg>
+            </div>
+            <p class="insta-bio">Barber Shop in Köln-Sülz ✂️ Damen & Herren</p>
+          </div>
+          <a
+            href="https://www.instagram.com/aloni_barbershop/"
+            target="_blank"
+            rel="noopener"
+            class="insta-follow-btn"
+            >FOLGEN</a
+          >
+        </div>
+
+        <!-- Instagram Grid -->
+        <div class="insta-grid reveal-up">
+          <a
+            href="https://www.instagram.com/aloni_barbershop/"
+            target="_blank"
+            rel="noopener"
+            class="insta-post"
+          >
+            <img
+              src="assets/images/gallery/1.jpg"
+              alt="Aloni's Barber Shop Post"
+              loading="lazy"
+            />
+            <div class="insta-post-overlay">
+              <div class="insta-post-stats">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  124</span
+                >
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"
+                    />
+                  </svg>
+                  8</span
+                >
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/aloni_barbershop/"
+            target="_blank"
+            rel="noopener"
+            class="insta-post"
+          >
+            <img
+              src="assets/images/gallery/Haarschnitt.jpg"
+              alt="Aloni's Barber Shop Post"
+              loading="lazy"
+            />
+            <div class="insta-post-overlay">
+              <div class="insta-post-stats">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  89</span
+                >
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"
+                    />
+                  </svg>
+                  12</span
+                >
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/aloni_barbershop/"
+            target="_blank"
+            rel="noopener"
+            class="insta-post"
+          >
+            <img
+              src="assets/images/gallery/Bart.jpg"
+              alt="Aloni's Barber Shop Post"
+              loading="lazy"
+            />
+            <div class="insta-post-overlay">
+              <div class="insta-post-stats">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  156</span
+                >
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"
+                    />
+                  </svg>
+                  15</span
+                >
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/aloni_barbershop/"
+            target="_blank"
+            rel="noopener"
+            class="insta-post"
+          >
+            <img
+              src="assets/images/gallery/2.jpg"
+              alt="Aloni's Barber Shop Post"
+              loading="lazy"
+            />
+            <div class="insta-post-overlay">
+              <div class="insta-post-stats">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  201</span
+                >
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"
+                    />
+                  </svg>
+                  23</span
+                >
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/aloni_barbershop/"
+            target="_blank"
+            rel="noopener"
+            class="insta-post"
+          >
+            <img
+              src="assets/images/gallery/3.jpg"
+              alt="Aloni's Barber Shop Post"
+              loading="lazy"
+            />
+            <div class="insta-post-overlay">
+              <div class="insta-post-stats">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  97</span
+                >
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"
+                    />
+                  </svg>
+                  6</span
+                >
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/aloni_barbershop/"
+            target="_blank"
+            rel="noopener"
+            class="insta-post"
+          >
+            <img
+              src="assets/images/gallery/Augenbrauen %26 Maske .jpg"
+              alt="Aloni's Barber Shop Post"
+              loading="lazy"
+            />
+            <div class="insta-post-overlay">
+              <div class="insta-post-stats">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  143</span
+                >
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"
+                    />
+                  </svg>
+                  18</span
+                >
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/aloni_barbershop/"
+            target="_blank"
+            rel="noopener"
+            class="insta-post"
+          >
+            <img
+              src="assets/images/gallery/4.jpg"
+              alt="Aloni's Barber Shop Post"
+              loading="lazy"
+            />
+            <div class="insta-post-overlay">
+              <div class="insta-post-stats">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  178</span
+                >
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"
+                    />
+                  </svg>
+                  21</span
+                >
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/aloni_barbershop/"
+            target="_blank"
+            rel="noopener"
+            class="insta-post"
+          >
+            <img
+              src="assets/images/gallery/1.jpg"
+              alt="Aloni's Barber Shop Post"
+              loading="lazy"
+            />
+            <div class="insta-post-overlay">
+              <div class="insta-post-stats">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  112</span
+                >
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"
+                    />
+                  </svg>
+                  9</span
+                >
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Follow CTA -->
+        <div class="insta-cta reveal-up">
+          <a
+            href="https://www.instagram.com/aloni_barbershop/"
+            target="_blank"
+            rel="noopener"
+            class="insta-follow-cta"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+            FOLLOW ON INSTAGRAM
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FAQ
+    ═══════════════════════════════════════════ -->
+    <section id="faq" class="section faq">
+      <div class="container">
+        <span class="section-tag centered reveal-up">FRAGEN?</span>
+        <h2 class="section-heading centered reveal-up">FAQ</h2>
+        <div class="faq-list">
+          <div class="faq-item reveal-up">
+            <button class="faq-q">
+              <span>Brauche ich einen Termin?</span
+              ><span class="faq-icon"></span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Nein! Du kannst auch gerne ohne Termin vorbeischauen. Allerdings
+                musst du dann etwas Wartezeit mitbringen!
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal-up">
+            <button class="faq-q">
+              <span>Schneidet ihr auch Frauen?</span
+              ><span class="faq-icon"></span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Ja! Wir bieten eine komplette Damen-Preisliste an — von
+                Schneiden, Waschen & Föhnen bis zu Waxing-Services.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal-up">
+            <button class="faq-q">
+              <span>Was ist das VIP Paket?</span><span class="faq-icon"></span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Unser VIP Paket für 60€ umfasst alle Premium-Services in einer
+                Sitzung — der ultimative Gentleman's Barber Erlebnis.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal-up">
+            <button class="faq-q">
+              <span>Wie storniere ich einen Termin?</span
+              ><span class="faq-icon"></span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Du kannst uns einfach anrufen unter 0221 - 57 77 77 85 und
+                Bescheid geben.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════════ -->
+    <section id="kontakt" class="section kontakt">
+      <div class="container">
+        <span class="section-tag centered reveal-up">FINDE UNS</span>
+        <h2 class="section-heading centered reveal-up">KONTAKT</h2>
+        <div class="kontakt-grid">
+          <div class="kontakt-info reveal-up">
+            <div class="info-item">
+              <h3>ADRESSE</h3>
+              <p>Berrenrather Str. 190<br />50937 Köln</p>
+            </div>
+            <div class="info-item">
+              <h3>TELEFON</h3>
+              <p>
+                <a href="tel:+492215777785">0221 - 57 77 77 85</a><br /><a
+                  href="tel:+4915228111112"
+                  >0152 - 28 11 11 12</a
+                >
+              </p>
+            </div>
+            <div class="info-item">
+              <h3>ÖFFNUNGSZEITEN</h3>
+              <p>
+                Mo – Fr: 10:00 – 20:00<br />Samstag: 10:00 – 18:00<br />Sonntag:
+                Geschlossen
+              </p>
+            </div>
+            <div class="info-item">
+              <h3>SOCIAL MEDIA</h3>
+              <div class="social-links">
+                <a
+                  href="https://www.instagram.com/aloni_barbershop/"
+                  target="_blank"
+                  rel="noopener"
+                  class="social-link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
+                  <span>@aloni_barbershop</span>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@alonis_barbershop?_r=1&_t=ZG-93olIEzUlPs"
+                  target="_blank"
+                  rel="noopener"
+                  class="social-link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                  </svg>
+                  <span>@alonis_barbershop</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="kontakt-map reveal-up">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2515.448!2d6.9245!3d50.9185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25a5f0b3b3b3%3A0x1234567890abcdef!2sBerrenrather+Str.+190%2C+50937+K%C3%B6ln!5e0!3m2!1sde!2sde!4v1700000000000"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FOOTER — Minimalist
+    ═══════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-main">
+          <img
+            src="assets/images/logo.png"
+            alt="Aloni's Barber Shop"
+            class="footer-logo"
+          />
+          <p class="footer-tagline">DA WO DU ZUHAUSE BIST · EST. 2015</p>
+          <div class="footer-links">
+            <a href="#about">Über uns</a>
+            <a href="#services">Services</a>
+            <a href="#preise">Preise</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#kontakt">Kontakt</a>
+          </div>
+          <div class="footer-socials">
+            <a
+              href="https://www.instagram.com/aloni_barbershop/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              class="social-icon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a
+              href="https://www.tiktok.com/@alonis_barbershop?_r=1&_t=ZG-93olIEzUlPs"
+              target="_blank"
+              rel="noopener"
+              aria-label="TikTok"
+              class="social-icon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <details>
+            <summary>Impressum</summary>
+            <div class="legal-content">
+              <p>
+                <strong>Alonis Barbershop</strong><br />Inhaber des
+                Unternehmens: Aloni Nshwan<br />Berrenrather Str. 190<br />50937
+                Köln<br />Deutschland<br />Email:
+                <a href="mailto:Aln.nshwan@gmail.com">Aln.nshwan@gmail.com</a>
+              </p>
+              <p>Verantwortlich für den Inhalt: Aln Nshwan</p>
+              <p>
+                Plattform der Europäischen Kommission zur Online-Streitbeilegung
+                (OS) für Verbraucher:
+                <a
+                  href="https://ec.europa.eu/consumers/odr/"
+                  target="_blank"
+                  rel="noopener"
+                  >https://ec.europa.eu/consumers/odr/</a
+                >. Wir sind nicht bereit und nicht verpflichtet an einem
+                Streitbeilegungsverfahren vor einer
+                Verbraucherschlichtungsstelle teilzunehmen.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Datenschutzerklärung</summary>
+            <div class="legal-content">
+              <p>
+                In dieser Datenschutzerklärung informieren wir Sie über die
+                Verarbeitung Ihrer personenbezogenen Daten.
+              </p>
+              <p>
+                Sofern Sie Ihre Datenschutzeinstellungen ändern möchten
+                (Einwilligungen erteilen oder bereits erteilte Einwilligungen
+                widerrufen), klicken Sie hier um Ihre Einstellungen zu ändern.
+              </p>
+              <h4>Verantwortlich</h4>
+              <p>
+                Aloni Nshwan, Alonis Barbershop, Berrenrather Str. 190, 50937
+                Köln, Deutschland,
+                <a href="mailto:Aln.nshwan@gmail.com">Aln.nshwan@gmail.com</a>
+              </p>
+
+              <h4>Widerspruchsrecht</h4>
+              <p>
+                Sofern die Verarbeitung Ihrer personenbezogenen Daten auf
+                Grundlage des berechtigten Interesses erfolgt, haben Sie das
+                Recht gegen diese Verarbeitung zu widersprechen.
+              </p>
+              <p>
+                Sofern keine zwingenden schutzwürdigen Gründe für die
+                Verarbeitung unsererseits vorliegen, wird die Verarbeitung Ihrer
+                Daten auf Basis dieser Rechtsgrundlage eingestellt.
+              </p>
+              <p>
+                Zudem haben Sie das Recht, der Verarbeitung Ihrer
+                personenbezogenen Daten zum Zweck der Direktwerbung zu
+                widersprechen. Im Fall des Widerspruchs werden Ihre
+                personenbezogenen Daten nicht mehr zum Zweck der Direktwerbung
+                verarbeitet.
+              </p>
+              <p>
+                Die Rechtmäßigkeit der bis zum Widerspruch verarbeiteten Daten
+                wird durch den Widerspruch nicht berührt.
+              </p>
+
+              <h4>Widerrufsrecht</h4>
+              <p>
+                Sie haben das Recht eine bereits erteilte Einwilligung jederzeit
+                zu widerrufen, indem Sie die Datenschutzeinstellungen ändern.
+              </p>
+              <p>
+                Im Fall der Einwilligung in den Erhalt elektronischer Werbung
+                kann der Widerruf Ihrer Einwilligung durch Klick auf den
+                Abmeldelink erfolgen. In diesem Fall wird eine Verarbeitung,
+                sofern keine andere Rechtsgrundlage besteht, eingestellt.
+              </p>
+              <p>
+                Die Rechtmäßigkeit der bis zum Widerruf verarbeiteten Daten wird
+                durch den Widerruf nicht berührt.
+              </p>
+
+              <h4>Betroffenenrechte</h4>
+              <p>
+                Sie haben zudem das Recht auf Auskunft, Berichtigung, Löschung
+                und Einschränkung der Verarbeitung der personenbezogenen Daten.
+              </p>
+              <p>
+                Soweit die Rechtsgrundlage der Verarbeitung Ihrer
+                personenbezogenen Daten in Ihrer Einwilligung oder in einem mit
+                Ihnen abgeschlossenen Vertrag besteht, haben Sie überdies das
+                Recht auf Datenübertragbarkeit.
+              </p>
+              <p>
+                Weiters haben Sie das Recht auf Beschwerde bei der
+                Aufsichtsbehörde. Nähere Informationen zu den Aufsichtsbehörden
+                in der Europäischen Union finden Sie
+                <a
+                  href="https://ec.europa.eu/justice/article-29/structure/data-protection-authorities/index_en.htm"
+                  target="_blank"
+                  rel="noopener"
+                  >hier</a
+                >.
+              </p>
+            </div>
+          </details>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 ALONIS BARBERSHOP · ALLE RECHTE VORBEHALTEN</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FAB Mobile CTA -->
+    <a
+      href="https://buchung.treatwell.de/ort/425567/menue/"
+      target="_blank"
+      rel="noopener"
+      class="fab-cta"
+      id="fabCta"
+      >✂ TERMIN BUCHEN</a
+    >
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
