@@ -1,8 +1,14 @@
-# Deployment logs (contain server connection details)
+# Deployment scripts and logs (contain sensitive data)
 deploy.log
+winscp_deploy.txt
+deploy.bat
 
-# Internal AI configuration (not part of the project)
+# AI-related metadata and logs
 antigravity_master_plan.md
+.gemini/
+.agent/
+.agents/
+.cortex/
 
 # IDE and editor files
 .vscode/

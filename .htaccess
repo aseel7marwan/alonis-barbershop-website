@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Redirect /impressum.html to /impressum/ (Canonical)
+RewriteCond %{THE_REQUEST} /impressum\.html [NC]
+RewriteRule ^impressum\.html$ /impressum/ [R=301,L]
+
+# Internal Rewrite /impressum/ to impressum.html
+RewriteRule ^impressum/?$ impressum.html [L,NC]
+
+# Redirect /datenschutzerklaerung-2.html to /datenschutzerklaerung-2/ (Canonical)
+RewriteCond %{THE_REQUEST} /datenschutzerklaerung-2\.html [NC]
+RewriteRule ^datenschutzerklaerung-2\.html$ /datenschutzerklaerung-2/ [R=301,L]
+
+# Internal Rewrite /datenschutzerklaerung-2/ to datenschutzerklaerung-2.html
+RewriteRule ^datenschutzerklaerung-2/?$ datenschutzerklaerung-2.html [L,NC]
+
+# Remove .html extension from other files (Internal rewrite)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]

@@ -8,7 +8,7 @@ option confirm off
 
 # Connect to the server
 # Format: sftp://user:password@host/
-open sftp://YOUR_SFTP_USERNAME:YOUR_SFTP_PASSWORD_HERE@ssh.alonis-barbershop.de/ -hostkey="*"
+open sftp://your_username:your_password@your_host_address/ -hostkey="*"
 
 # Synchronize local files to remote server
 # '|' starts the exclusion list. 
