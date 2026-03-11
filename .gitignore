@@ -2,6 +2,7 @@
 deploy.log
 winscp_deploy.txt
 deploy.bat
+.env
 
 # AI-related metadata and logs
 antigravity_master_plan.md

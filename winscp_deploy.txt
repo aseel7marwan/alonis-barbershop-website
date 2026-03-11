@@ -7,8 +7,10 @@ option batch on
 option confirm off
 
 # Connect to the server
-# Format: sftp://user:password@host/
-open sftp://your_username:your_password@your_host_address/ -hostkey="*"
+# Credentials and host are provided via environment variables loaded from .env:
+#   DEPLOY_SFTP_USER, DEPLOY_SFTP_PASS, DEPLOY_SFTP_HOST, DEPLOY_SFTP_HOSTKEY
+# Format with env vars: sftp://%DEPLOY_SFTP_USER%:%DEPLOY_SFTP_PASS%@%DEPLOY_SFTP_HOST%/
+open sftp://%DEPLOY_SFTP_USER%:%DEPLOY_SFTP_PASS%@%DEPLOY_SFTP_HOST%/ -hostkey="%DEPLOY_SFTP_HOSTKEY%"
 
 # Synchronize local files to remote server
 # '|' starts the exclusion list. 

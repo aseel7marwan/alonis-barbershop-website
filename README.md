@@ -73,6 +73,59 @@ The server-side backend is built with hardened PHP and implements industry-stand
 
 ---
 
+## 🔐 Environment & Deployment Configuration
+
+Deployment to the production server is handled via a small WinSCP script and a Windows batch file.  
+All sensitive data (SFTP host, username, password, host key) is **kept out of the repository** and loaded from a local `.env` file.
+
+### 1. Create your `.env` file
+
+In the project root (same folder as `deploy.bat`), create a new file named `.env`.  
+You can start from the provided `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env` and fill in your real deployment credentials:
+
+```env
+DEPLOY_SFTP_HOST=your_real_host
+DEPLOY_SFTP_USER=your_real_username
+DEPLOY_SFTP_PASS=your_real_password
+DEPLOY_SFTP_HOSTKEY=ssh-rsa 2048 xx:xx:...
+```
+
+> **Note:** The `.env` file is listed in `.gitignore` and will **never be committed** to Git.
+
+### 2. Required environment variables
+
+- `DEPLOY_SFTP_HOST` — SFTP server hostname or IP
+- `DEPLOY_SFTP_USER` — SFTP username
+- `DEPLOY_SFTP_PASS` — SFTP password
+- `DEPLOY_SFTP_HOSTKEY` — Server host key fingerprint (recommended) or `*` as a fallback
+
+The `deploy.bat` script automatically loads these variables from `.env` before running `winscp_deploy.txt`.  
+The WinSCP script then connects using:
+
+```text
+sftp://%DEPLOY_SFTP_USER%:%DEPLOY_SFTP_PASS%@%DEPLOY_SFTP_HOST%/ -hostkey="%DEPLOY_SFTP_HOSTKEY%"
+```
+
+### 3. How to deploy
+
+1. Ensure WinSCP is installed (adjust `WINSCP_PATH` in `deploy.bat` if needed).
+2. Create and fill `.env` with your production SFTP credentials.
+3. From a Windows command prompt or PowerShell, run:
+
+```bash
+deploy.bat
+```
+
+If everything is configured correctly, your local files will be synchronized to the server without exposing any secrets in the repository.
+
+---
+
 ## ⚖️ License & Intellectual Property
 
 > **⚠️ Proprietary / Showcase Only**
