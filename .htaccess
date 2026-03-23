@@ -1,20 +1,151 @@
+# ==========================================================================
+# .htaccess — alonis-barbershop.de
+# Production-Ready | Apache 2.4+ | Shared Hosting (IONOS)
+# ==========================================================================
+
+
+# --------------------------------------------------------------------------
+# 1. CORE ENGINE
+# --------------------------------------------------------------------------
 RewriteEngine On
 
-# Redirect /impressum.html to /impressum/ (Canonical)
-RewriteCond %{THE_REQUEST} /impressum\.html [NC]
-RewriteRule ^impressum\.html$ /impressum/ [R=301,L]
 
-# Internal Rewrite /impressum/ to impressum.html
-RewriteRule ^impressum/?$ impressum.html [L,NC]
+# --------------------------------------------------------------------------
+# 2. FORCE HTTPS (301) — domain-scoped
+#    Only fires for alonis-barbershop.de to avoid conflicts on shared hosting.
+# --------------------------------------------------------------------------
+RewriteCond %{HTTP_HOST} ^(www\.)?alonis-barbershop\.de$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://www.alonis-barbershop.de/$1 [R=301,L]
 
-# Redirect /datenschutzerklaerung-2.html to /datenschutzerklaerung-2/ (Canonical)
-RewriteCond %{THE_REQUEST} /datenschutzerklaerung-2\.html [NC]
-RewriteRule ^datenschutzerklaerung-2\.html$ /datenschutzerklaerung-2/ [R=301,L]
 
-# Internal Rewrite /datenschutzerklaerung-2/ to datenschutzerklaerung-2.html
-RewriteRule ^datenschutzerklaerung-2/?$ datenschutzerklaerung-2.html [L,NC]
+# --------------------------------------------------------------------------
+# 3. FORCE WWW (301) — domain-scoped
+#    Redirect bare domain to www after HTTPS is ensured.
+# --------------------------------------------------------------------------
+RewriteCond %{HTTP_HOST} ^alonis-barbershop\.de$ [NC]
+RewriteRule ^(.*)$ https://www.alonis-barbershop.de/$1 [R=301,L]
 
-# Remove .html extension from other files (Internal rewrite)
+
+# --------------------------------------------------------------------------
+# 4. CLEAN URLs — Remove .html Extension
+# --------------------------------------------------------------------------
+
+# 4a. External redirect: strip .html from the visible URL (301)
+#     /impressum.html  →  /impressum/
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1/ [R=301,L]
+
+# 4b. Trailing-slash enforcement for extensionless URLs (301)
+#     /impressum  →  /impressum/
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [NC,L]
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.+)$ /$1/ [R=301,L]
+
+# 4c. Internal rewrite: serve the .html file for clean URLs
+#     /impressum/  →  impressum.html  (silently, no redirect)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/$ $1.html [L]
+
+
+# --------------------------------------------------------------------------
+# 5. SECURITY — Disable Directory Browsing
+# --------------------------------------------------------------------------
+Options -Indexes
+
+
+# --------------------------------------------------------------------------
+# 6. SECURITY — Block Access to Sensitive Files & Directories
+# --------------------------------------------------------------------------
+
+# Block .env files
+<FilesMatch "^\.env">
+    # Apache 2.4+
+    Require all denied
+</FilesMatch>
+
+# Block .htaccess itself (belt-and-suspenders)
+<FilesMatch "^\.htaccess">
+    Require all denied
+</FilesMatch>
+
+# Block .gitignore
+<FilesMatch "^\.gitignore">
+    Require all denied
+</FilesMatch>
+
+# Block deployment scripts and logs
+<FilesMatch "(winscp_deploy\.txt|deploy\.bat|deploy\.log)$">
+    Require all denied
+</FilesMatch>
+
+# Block the entire .git directory
+RewriteRule (^|/)\.git(/|$) - [F,L]
+
+
+# --------------------------------------------------------------------------
+# 7. PERFORMANCE — Browser Caching (mod_expires)
+# --------------------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Default: 1 week
+    ExpiresDefault                         "access plus 1 week"
+
+    # HTML — short cache, allows quick content updates
+    ExpiresByType text/html                "access plus 1 hour"
+
+    # CSS & JavaScript — long cache (use cache-busting query strings on updates)
+    ExpiresByType text/css                 "access plus 1 year"
+    ExpiresByType application/javascript   "access plus 1 year"
+    ExpiresByType text/javascript          "access plus 1 year"
+
+    # Images
+    ExpiresByType image/jpeg               "access plus 1 year"
+    ExpiresByType image/png                "access plus 1 year"
+    ExpiresByType image/gif                "access plus 1 year"
+    ExpiresByType image/svg+xml            "access plus 1 year"
+    ExpiresByType image/webp               "access plus 1 year"
+    ExpiresByType image/x-icon             "access plus 1 year"
+    ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/woff                "access plus 1 year"
+    ExpiresByType font/woff2               "access plus 1 year"
+    ExpiresByType application/font-woff    "access plus 1 year"
+    ExpiresByType application/font-woff2   "access plus 1 year"
+    ExpiresByType font/ttf                 "access plus 1 year"
+    ExpiresByType font/otf                 "access plus 1 year"
+</IfModule>
+
+
+# --------------------------------------------------------------------------
+# 8. SECURITY HEADERS (mod_headers)
+# --------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # HSTS — Force browsers to always use HTTPS (1 year, include subdomains)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Prevent MIME-type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Clickjacking protection
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # XSS filter (legacy browsers)
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Referrer policy — send origin only on cross-origin requests
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions policy — disable unnecessary browser features
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+</IfModule>
+
+
+# ==========================================================================
+# END
+# ==========================================================================
