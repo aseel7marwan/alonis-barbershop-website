@@ -1739,6 +1739,228 @@ button {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   BOOKING CTA — Premium Call-To-Action
+═══════════════════════════════════════════════════════════ */
+.booking-cta-section {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    #0f0e0a 0%,
+    var(--bg-abyss) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-cta-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201, 164, 76, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.booking-cta-block {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 64px 48px;
+  background: var(--bg-card);
+  border: 1px solid rgba(201, 164, 76, 0.1);
+  position: relative;
+}
+
+.booking-cta-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: var(--gold-gradient);
+}
+
+.booking-cta-block::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: var(--gold-gradient);
+}
+
+.booking-cta-icon {
+  margin-bottom: 24px;
+  color: var(--gold);
+  animation: phonePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes phonePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.booking-cta-heading {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.booking-cta-sub {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  max-width: 440px;
+  margin: 0 auto 36px;
+}
+
+.booking-cta-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 48px;
+  font-family: var(--font-body);
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--bg-abyss);
+  background: var(--gold-gradient);
+  background-size: 200% 100%;
+  border: none;
+  transition:
+    background-position 0.5s ease,
+    box-shadow 0.5s ease,
+    transform 0.3s ease;
+  box-shadow:
+    0 0 40px var(--gold-glow),
+    0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.booking-cta-phone:hover {
+  background-position: 100% 0;
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 60px rgba(201, 164, 76, 0.35),
+    0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+.booking-cta-phone-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-cta-hint {
+  margin-top: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FAB — Mobile Call Button
+═══════════════════════════════════════════════════════════ */
+.fab-cta {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--bg-abyss);
+  background: var(--gold-gradient);
+  background-size: 200% 100%;
+  border: none;
+  box-shadow:
+    0 0 30px var(--gold-glow),
+    0 6px 24px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.4s ease,
+    background-position 0.5s ease,
+    box-shadow 0.4s ease,
+    transform 0.3s ease;
+}
+
+.fab-cta:hover {
+  background-position: 100% 0;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 50px rgba(201, 164, 76, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .booking-cta-block {
+    padding: 48px 28px;
+  }
+
+  .booking-cta-phone {
+    padding: 16px 32px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    gap: 10px;
+  }
+
+  .fab-cta {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 22px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-cta-block {
+    padding: 40px 20px;
+  }
+
+  .booking-cta-phone {
+    padding: 14px 24px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .fab-cta {
+    bottom: 16px;
+    right: 16px;
+    padding: 12px 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
    REDUCED MOTION
 ═══════════════════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
