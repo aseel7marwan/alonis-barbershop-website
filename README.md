@@ -87,39 +87,29 @@ You can start from the provided `.env.example`:
 cp .env.example .env
 ```
 
-Then edit `.env` and fill in your real deployment credentials:
-
-```env
-DEPLOY_SFTP_HOST=your_real_host
-DEPLOY_SFTP_USER=your_real_username
-DEPLOY_SFTP_PASS=your_real_password
-DEPLOY_SFTP_HOSTKEY=ssh-rsa 2048 xx:xx:...
-```
+Then edit `.env` and fill in your real deployment credentials (see `.env.example` for placeholders).
 
 > **Note:** The `.env` file is listed in `.gitignore` and will **never be committed** to Git.
 
 ### 2. Required environment variables
 
+- `DEPLOY_WINSCP_EXE` — Full path to `WinSCP.com` on your PC
 - `DEPLOY_SFTP_HOST` — SFTP server hostname or IP
 - `DEPLOY_SFTP_USER` — SFTP username
 - `DEPLOY_SFTP_PASS` — SFTP password
+- `DEPLOY_SFTP_REMOTE_DIR` — Remote directory to sync into (e.g. `/path/to/remote/dir` or `.`)
 - `DEPLOY_SFTP_HOSTKEY` — Server host key fingerprint (recommended) or `*` as a fallback
 
-The `deploy.bat` script automatically loads these variables from `.env` before running `winscp_deploy.txt`.  
-The WinSCP script then connects using:
-
-```text
-sftp://%DEPLOY_SFTP_USER%:%DEPLOY_SFTP_PASS%@%DEPLOY_SFTP_HOST%/ -hostkey="%DEPLOY_SFTP_HOSTKEY%"
-```
+The `deploy.bat` script loads these from `.env`, then runs `winscp_deploy.txt`, which connects using WinSCP environment expansion (no secrets in the script files themselves).
 
 ### 3. How to deploy
 
-1. Ensure WinSCP is installed (adjust `WINSCP_PATH` in `deploy.bat` if needed).
-2. Create and fill `.env` with your production SFTP credentials.
-3. From a Windows command prompt or PowerShell, run:
+1. Install WinSCP and set `DEPLOY_WINSCP_EXE` in `.env` to the full path of `WinSCP.com`.
+2. Fill the SFTP variables in `.env` (never commit that file).
+3. From a Windows command prompt or PowerShell **in the project root**, run:
 
-```bash
-deploy.bat
+```powershell
+.\deploy.bat
 ```
 
 If everything is configured correctly, your local files will be synchronized to the server without exposing any secrets in the repository.

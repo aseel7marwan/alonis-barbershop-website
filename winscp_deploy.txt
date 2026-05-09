@@ -1,21 +1,26 @@
 # WinSCP Script for Aloni's Barber Shop Deployment
 # -------------------------------------------------
+# Connection values are NOT hardcoded. Set them in a local .env file (never commit .env):
+#   <FTP_USER>     -> DEPLOY_SFTP_USER
+#   <FTP_PASSWORD> -> DEPLOY_SFTP_PASS
+#   <YOUR_SERVER>  -> DEPLOY_SFTP_HOST (hostname or IP)
+#   Host key        -> DEPLOY_SFTP_HOSTKEY
+# Remote web root  -> DEPLOY_SFTP_REMOTE_DIR (e.g. /html or /path/to/remote/dir — see .env.example)
 
 # Automatically answer all prompts
 option batch on
 # Disable overwriting confirmations
 option confirm off
 
-# Connect to the server
-# Credentials and host are provided via environment variables loaded from .env:
-#   DEPLOY_SFTP_USER, DEPLOY_SFTP_PASS, DEPLOY_SFTP_HOST, DEPLOY_SFTP_HOSTKEY
-# Format with env vars: sftp://%DEPLOY_SFTP_USER%:%DEPLOY_SFTP_PASS%@%DEPLOY_SFTP_HOST%/
+# Connect: sftp://<FTP_USER>:<FTP_PASSWORD>@<YOUR_SERVER>/
 open sftp://%DEPLOY_SFTP_USER%:%DEPLOY_SFTP_PASS%@%DEPLOY_SFTP_HOST%/ -hostkey="%DEPLOY_SFTP_HOSTKEY%"
 
-# Synchronize local files to remote server
-# '|' starts the exclusion list. 
-# We exclude the master plan as requested.
-synchronize remote . ./ -filemask="|antigravity_master_plan.md; winscp_deploy.txt; deploy.bat; deploy.log; .git/; .agent/"
+# Change to remote directory before sync (defaults to "." if unset in deploy.bat)
+cd %DEPLOY_SFTP_REMOTE_DIR%
+
+# Synchronize local project root to current remote directory
+# '|' starts the exclusion list.
+synchronize remote . ./ -filemask="|antigravity_master_plan.md; winscp_deploy.txt; deploy.bat; deploy.log; .git/; .agent/; .env; .env.*"
 
 # Disconnect
 close
