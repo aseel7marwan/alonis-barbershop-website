@@ -1,14 +1,13 @@
 <p align="center">
   <h1 align="center">✂️ Aloni's Barbershop</h1>
   <p align="center">
-    <strong>Premium Web Presence — Handcrafted with Zero Dependencies</strong>
+    <strong>Frontend Development Project — Built with Vanilla Web Technologies</strong>
   </p>
   <p align="center">
-    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-    <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
-    <img src="https://img.shields.io/badge/Performance-100%2F100-brightgreen?style=for-the-badge&logo=google&logoColor=white" alt="PageSpeed 100/100" />
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+    <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
   </p>
 </p>
 
@@ -18,7 +17,7 @@
 
 <p align="center">
   <a href="https://alonis-barbershop.de" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_LIVE_DEMO-alonis--barbershop.de-C9A44C?style=for-the-badge&labelColor=1a1a1a" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/🌐_LIVE_DEMO-alonis--barbershop.de-C9A44C?style=for-the-badge&labelColor=1a1a1a" />
   </a>
 </p>
 
@@ -30,103 +29,82 @@
 
 ## 📖 About The Project
 
-**Aloni's Barbershop** is a premium, fully custom-built web presence for a renowned barbershop in **Köln-Sülz, Germany** — operating since 2015 and serving both men and women.
+**Aloni's Barbershop** is a small-to-medium scale frontend project built for a local business in Cologne, Germany.
 
-The entire site was **hand-built from scratch** using only **Vanilla HTML, CSS, and JavaScript** — with **zero frameworks, zero libraries, and zero npm dependencies**. Every animation, every layout, and every interaction was coded manually to achieve maximum performance and full creative control.
+The goal of this project was to create a clean, fast, and responsive web presence using only vanilla web technologies. The focus was on layout structure, performance basics, and user experience without using external frameworks.
 
-### ✨ Highlights
-
-- **🚀 Zero Dependencies** — No React, no Bootstrap, no jQuery. Pure, hand-crafted code for total performance control.
-- **🎬 Cinematic UI/UX** — Glassmorphism navigation, parallax hero sections, infinite marquee galleries, scroll-triggered reveal animations, and a liquid-effect CTA button — all built with vanilla CSS & JS.
-- **📱 Fully Responsive** — Flawless experience from 320px mobile screens to 4K ultrawide monitors, including a fullscreen overlay mobile menu.
-- **♿ Accessible** — Semantic HTML5 structure, proper ARIA labels, lazy-loaded images with descriptive alt text, and preloaded web fonts.
-- **🇩🇪 German Localization** — Fully localized UI with native German content, currency formatting, and cultural design conventions.
-- **📸 Instagram Integration** — Custom-built Instagram-style feed section with profile header, verification badge, and interactive photo grid with hover stats overlay.
-- **📋 DSGVO (GDPR) Compliance** — Full German privacy policy (Datenschutzerklärung) integrated directly into the site via expandable `<details>` elements.
+This project reflects practical learning in real-world frontend development.
 
 ---
 
-## ⚡ Performance & Security
+## ✨ Key Features
 
-### 🏆 Google PageSpeed: 100/100
-
-This project was engineered from the ground up to achieve a **perfect 100/100 Google PageSpeed score** across all categories. Key techniques include:
-
-| Technique              | Implementation                                                                         |
-| ---------------------- | -------------------------------------------------------------------------------------- |
-| **Zero JS Frameworks** | No framework overhead — pure vanilla JS keeps the bundle minimal                       |
-| **Lazy Loading**       | All gallery and below-the-fold images use native `loading="lazy"`                      |
-| **Font Optimization**  | Google Fonts loaded via `preconnect` hints and `display=swap` for zero render-blocking |
-| **Minimal DOM**        | Hand-written HTML avoids the deep nesting typical of component frameworks              |
-| **CSS Animations**     | All animations use GPU-accelerated `transform` and `opacity` — zero layout thrashing   |
-| **Inline SVGs**        | All icons are inline SVGs — zero additional HTTP requests for icon libraries           |
-| **Semantic HTML5**     | Proper document structure enables optimal browser parsing and rendering                |
-
-### 🔒 PHP Backend Security
-
-The server-side backend is built with hardened PHP and implements industry-standard security measures:
-
-- **CSRF Protection** — All form submissions are validated with unique anti-CSRF tokens to prevent cross-site request forgery attacks.
-- **Rate Limiting** — Server-side request throttling prevents brute-force spam and abuse of the contact form endpoint.
-- **DSGVO / GDPR Compliance** — Full German Data Protection Regulation compliance with a comprehensive _Datenschutzerklärung_ (privacy policy), proper consent mechanisms, and responsible data handling practices.
-- **Input Sanitization** — All user inputs are sanitized and validated server-side before processing.
+- 🎬 **Modern Hero Section** — Full-screen layout with smooth scroll interaction  
+- 📱 **Responsive Design** — Optimized for mobile, tablet, and desktop devices  
+- 🎨 **Custom UI Styling** — Hand-written CSS with layout structure and spacing system  
+- ⚡ **Performance-Oriented Build** — Lightweight structure with minimal dependencies  
+- 📸 **Image Gallery Section** — Simple visual showcase for services and work  
+- 📋 **Contact Section** — Basic contact form integration with backend handling  
+- 🇩🇪 **Localized Content** — German-language content adapted for local users  
 
 ---
 
-## 🔐 Environment & Deployment Configuration
+## ⚙️ Technical Overview
 
-Deployment to the production server is handled via a small WinSCP script and a Windows batch file.  
-All sensitive data (SFTP host, username, password, host key) is **kept out of the repository** and loaded from a local `.env` file.
+- Built using **vanilla HTML5, CSS3, and JavaScript**
+- PHP used for basic backend form handling
+- Responsive layout using Flexbox and Grid
+- Simple DOM-based interactions (no frameworks)
+- Structured for easy deployment on shared hosting environments
 
-### 1. Create your `.env` file
+---
 
-In the project root (same folder as `deploy.bat`), create a new file named `.env`.  
-You can start from the provided `.env.example`:
+## 🔐 Backend (PHP)
 
-```bash
-cp .env.example .env
+The backend is intentionally simple and focused on functionality:
+
+- Contact form handling via PHP
+- Basic input validation and sanitization
+- Simple anti-spam protection (honeypot / basic checks)
+- Email forwarding to business inbox
+
+> Security features are implemented at a basic and practical level suitable for small business websites.
+
+---
+
+## 📁 Project Structure
+
+```
+├── index.html
+├── style.css
+├── script.js
+├── backend/
+│   └── contact.php
+├── assets/
+│   ├── images/
+│   └── icons/
+└── README.md
 ```
 
-Then edit `.env` and fill in your real deployment credentials (see `.env.example` for placeholders).
-
-> **Note:** The `.env` file is listed in `.gitignore` and will **never be committed** to Git.
-
-### 2. Required environment variables
-
-- `DEPLOY_WINSCP_EXE` — Full path to `WinSCP.com` on your PC
-- `DEPLOY_SFTP_HOST` — SFTP server hostname or IP
-- `DEPLOY_SFTP_USER` — SFTP username
-- `DEPLOY_SFTP_PASS` — SFTP password
-- `DEPLOY_SFTP_REMOTE_DIR` — Remote directory to sync into (e.g. `/path/to/remote/dir` or `.`)
-- `DEPLOY_SFTP_HOSTKEY` — Server host key fingerprint (recommended) or `*` as a fallback
-
-The `deploy.bat` script loads these from `.env`, then runs `winscp_deploy.txt`, which connects using WinSCP environment expansion (no secrets in the script files themselves).
-
-### 3. How to deploy
-
-1. Install WinSCP and set `DEPLOY_WINSCP_EXE` in `.env` to the full path of `WinSCP.com`.
-2. Fill the SFTP variables in `.env` (never commit that file).
-3. From a Windows command prompt or PowerShell **in the project root**, run:
-
-```powershell
-.\deploy.bat
-```
-
-If everything is configured correctly, your local files will be synchronized to the server without exposing any secrets in the repository.
-
 ---
 
-## ⚖️ License & Intellectual Property
+## ⚖️ License
 
-> **⚠️ Proprietary / Showcase Only**
-> This repository serves primarily as a technical portfolio piece. The architecture, concepts, and custom source code are proprietary. Unauthorized commercial use, modification, or distribution is strictly prohibited.
+> This project is a **portfolio and learning project** created for demonstration purposes.  
+> It is not intended for commercial reuse without permission.
+
+---
 
 ## 👤 Author & Contact
 
-**Aseel Marwan Kheder**
-IT-Support Specialist & Web Developer
+**Aseel Marwan Kheder**  
+IT-Support Specialist & Junior Web Developer
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aseel-marwan-kheder-36b17033b/)
+📧 Email: **kontakt@aseelmarwan.de**
+
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aseel7marwan)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com)
 
-📧 **Email:** [kontakt@aseelmarwan.de](mailto:kontakt@aseelmarwan.de)
+---
+
+© 2026 Aseel Marwan Kheder. Built for learning and practical web development experience.
