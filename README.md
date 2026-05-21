@@ -103,7 +103,7 @@ IT-Support Specialist & Junior Web Developer
 📧 Email: **kontakt@aseelmarwan.de**
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aseel7marwan)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com](https://www.linkedin.com/in/aseel7marwan/))
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([[https://www.linkedin.com](https://www.linkedin.com/in/aseel7marwan/)](https://www.linkedin.com/in/aseel7marwan/))
 
 ---
 
