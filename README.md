@@ -100,12 +100,12 @@ The backend is intentionally simple and focused on functionality:
 **Aseel Marwan Kheder**  
 IT-Support Specialist & Junior Web Developer
 
-📧 Email: **kontakt@aseelmarwan.de**
+## 📫 Contact
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aseel7marwan)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aseel7marwan/)
-
+- 🌐 Portfolio: https://www.aseelmarwan.de
+- 💼 LinkedIn: https://www.linkedin.com/in/aseel7marwan/
+- 💻 GitHub: https://github.com/aseel7marwan
+- ✉️ Email: mailto:kontakt@aseelmarwan.de
 ---
 
 © 2026 Aseel Marwan Kheder. Built for learning and practical web development experience.
